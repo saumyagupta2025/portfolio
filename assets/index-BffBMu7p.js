@@ -69,7 +69,7 @@ This list will drift as the field moves. Last updated May 2025.
 title: "Databricks Patterns & Optimisations"
 category: "Data Engineering"
 updated: "2025-05-10"
-summary: "Notes on Databricks optimisation — Autoloader, Delta Lake, cluster configuration, and cost management patterns from production experience."
+summary: "Notes on Databricks optimisation — Autoloader, Delta Lake, cluster configuration, and cost management patterns."
 tags: ["Databricks", "PySpark", "Delta Lake", "Data Engineering"]
 ---
 
@@ -109,7 +109,7 @@ df.writeStream
 \`\`\`python
 .option("cloudFiles.maxFilesPerTrigger", 1000)  # limit per trigger
 \`\`\`
-We used this to prevent runaway jobs from processing unexpectedly large batches.
+Use this to prevent runaway jobs from processing unexpectedly large batches.
 
 ### What I learned from optimising Autoloader (70% runtime reduction)
 
@@ -191,7 +191,7 @@ Watch out: auto-scaling doesn't always scale down fast enough. Set \`spark.datab
 
 ## Terraform for Databricks Infrastructure
 
-We manage all Databricks infrastructure as Terraform:
+Managing Databricks infrastructure as Terraform:
 
 \`\`\`hcl
 resource "databricks_job" "etl_pipeline" {
@@ -244,7 +244,7 @@ WHERE created_at > (SELECT MAX(created_at) FROM {{ this }})
 {% endif %}
 \`\`\`
 
-The 35% speed increase and 60% cost reduction we achieved came from:
+Key gains from this pattern:
 1. Replacing full table rebuilds with incremental models
 2. Adding proper partitioning and Z-ordering
 3. Eliminating redundant intermediate tables
@@ -252,7 +252,7 @@ The 35% speed increase and 60% cost reduction we achieved came from:
 title: "LLM Evaluation Frameworks"
 category: "AI/ML"
 updated: "2025-05-15"
-summary: "Comparing DeepEval, LangSmith, RAGAS, and other tools for evaluating LLMs in production. Includes notes from enterprise benchmarking."
+summary: "Comparing DeepEval, LangSmith, RAGAS, and other tools for evaluating LLMs in production."
 tags: ["LLM", "Evaluation", "DeepEval", "LangSmith", "RAGAS"]
 ---
 
@@ -277,7 +277,7 @@ In production, you want mostly (1) with (3) as a backstop.
 | **Coherence** | Is it well-structured and logically consistent? |
 | **Harmlessness** | Does it avoid harmful, biased, or unsafe content? |
 | **Latency** | How fast is it? (often overlooked as a metric) |
-| **Cost** | Tokens in/out × price. First-class in enterprise. |
+| **Cost** | Tokens in/out × price. Easily overlooked until scale hits. |
 
 For code-specific tasks, add: **correctness**, **security**, **efficiency**.
 
@@ -347,7 +347,7 @@ print(result.to_pandas())
 
 Not an evaluation framework per se, but valuable for model comparison. Same prompts, same tasks, multiple models in one place.
 
-For our use case: invaluable for selecting the right model per task type.
+Invaluable for selecting the right model per task type.
 
 ## LLM-as-Judge
 
@@ -384,7 +384,7 @@ The most important thing: **automate before you scale.** Manual evaluation doesn
 
 ## Open Questions I'm Still Thinking About
 
-- How do you evaluate "style" alignment — matching an organisation's voice?
+- How do you evaluate "style" alignment — matching a specific voice or tone?
 - When does LLM-as-judge become circular? (Evaluating GPT-4 with GPT-4)
 - How do you handle evaluation dataset drift over time?
 `,Rr=`---
