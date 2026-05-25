@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, Sun, Moon } from 'lucide-react'
+import { useDarkMode } from '../hooks/useDarkMode'
 
 const navLinks = [
   { to: '/projects', label: 'projects' },
@@ -12,6 +13,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
+  const [dark, toggleDark] = useDarkMode()
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#faf9f6]/95 backdrop-blur-sm border-b border-[#e7e5e4]">
@@ -40,16 +42,32 @@ export default function Navbar() {
               {label}
             </NavLink>
           ))}
+          <button
+            onClick={toggleDark}
+            aria-label="Toggle dark mode"
+            className="text-[#78716c] hover:text-[#44403c] transition-colors ml-1"
+          >
+            {dark ? <Sun size={15} /> : <Moon size={15} />}
+          </button>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-[#78716c] hover:text-[#1c1917] transition-colors"
-          onClick={() => setOpen(o => !o)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={20} /> : <Menu size={20} />}
-        </button>
+        {/* Mobile: dark toggle + hamburger */}
+        <div className="md:hidden flex items-center gap-3">
+          <button
+            onClick={toggleDark}
+            aria-label="Toggle dark mode"
+            className="text-[#78716c] hover:text-[#1c1917] transition-colors"
+          >
+            {dark ? <Sun size={16} /> : <Moon size={16} />}
+          </button>
+          <button
+            className="text-[#78716c] hover:text-[#1c1917] transition-colors"
+            onClick={() => setOpen(o => !o)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}

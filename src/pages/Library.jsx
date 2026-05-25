@@ -7,7 +7,7 @@ const TABS = ['Books', 'Videos', 'Podcasts', 'Articles']
 const statusLabel = { reading: 'Reading', read: 'Read', 'want-to-read': 'Want to read' }
 const statusColor = {
   reading: 'text-[#1d4ed8] bg-blue-50 border-blue-100',
-  read: 'text-[#78716c] bg-[#f5f5f4] border-[#e7e5e4]',
+  read: 'text-green-700 bg-green-50 border-green-200',
   'want-to-read': 'text-[#a8a29e] bg-[#f5f5f4] border-[#e7e5e4]',
 }
 

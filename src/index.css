@@ -20,6 +20,86 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+/* ── Dark mode ──────────────────────────────────────────────── */
+html.dark {
+  background-color: #282828;
+  color: #e2dfd9;
+  color-scheme: dark;
+}
+
+/* Base elements */
+html.dark hr { border-color: #3c3c3c !important; }
+
+/* Backgrounds */
+html.dark [class*="bg-[#faf9f6]"] { background-color: #282828 !important; }
+html.dark [class*="bg-[#f5f5f4]"] { background-color: #323232 !important; }
+html.dark [class*="bg-[#eeece8]"] { background-color: #2e2e2e !important; }
+html.dark [class*="bg-[#d6d3d1]"] { background-color: #4a4a4a !important; }
+
+/* Primary text */
+html.dark [class*="text-[#1c1917]"] { color: #e2dfd9 !important; }
+html.dark [class*="text-[#292524]"] { color: #ccc9c4 !important; }
+html.dark [class*="text-[#44403c]"] { color: #b5b1ac !important; }
+html.dark [class*="text-[#57534e]"] { color: #a09c97 !important; }
+html.dark [class*="text-[#78716c]"] { color: #7c7874 !important; }
+html.dark [class*="text-[#a8a29e]"] { color: #908c88 !important; }
+html.dark [class*="text-[#d6d3d1]"] { color: #4a4a4a !important; }
+
+/* Hover text overrides */
+html.dark [class*="hover:text-[#1c1917]"]:hover { color: #e2dfd9 !important; }
+html.dark [class*="hover:text-[#44403c]"]:hover { color: #b5b1ac !important; }
+
+/* Borders */
+html.dark [class*="border-[#e7e5e4]"] { border-color: #3c3c3c !important; }
+html.dark [class*="border-[#d6d3d1]"] { border-color: #474747 !important; }
+html.dark [class*="border-[#eeece8]"] { border-color: #2e2e2e !important; }
+
+/* Hover borders */
+html.dark [class*="hover:border-[#d6d3d1]"]:hover { border-color: #474747 !important; }
+
+/* Accent (blue links) — use ~= to match exact class token, not substrings */
+html.dark [class~="text-[#1d4ed8]"] { color: #6aa6f5 !important; }
+html.dark [class*="hover:text-[#1d4ed8]"]:hover { color: #6aa6f5 !important; }
+html.dark [class~="text-[#1e40af]"] { color: #90bef8 !important; }
+
+/* Tags & status badges */
+html.dark .bg-stone-100 { background-color: #363636 !important; }
+html.dark .text-stone-600 { color: #a0a09c !important; }
+html.dark .border-stone-200 { border-color: #474747 !important; }
+html.dark .bg-blue-50 { background-color: #1e2d40 !important; }
+html.dark .border-blue-100 { border-color: #2a4060 !important; }
+html.dark .bg-green-50 { background-color: #1a2e1a !important; }
+html.dark .border-green-200 { border-color: #2a4a2a !important; }
+html.dark .text-green-700 { color: #6abf6a !important; }
+
+/* Prose (markdown) */
+html.dark .prose { color: #ccc9c4; }
+html.dark .prose h1,
+html.dark .prose h2,
+html.dark .prose h3 { color: #e2dfd9; }
+html.dark .prose p,
+html.dark .prose li { color: #ccc9c4; }
+html.dark .prose strong { color: #e2dfd9; }
+html.dark .prose a { color: #6aa6f5; }
+html.dark .prose a:hover { color: #90bef8; }
+html.dark .prose code {
+  background: #323232;
+  border-color: #3c3c3c;
+  color: #e2dfd9;
+}
+html.dark .prose pre {
+  background: #1e1e1e;
+  color: #e2dfd9;
+}
+html.dark .prose blockquote {
+  border-color: #444;
+  color: #7c7874;
+}
+html.dark .prose hr,
+html.dark .prose th,
+html.dark .prose td { border-color: #3c3c3c; }
+html.dark .prose th { color: #7c7874; }
+
 /* ── Splash screen ──────────────────────────────────────────── */
 @keyframes loadingBar {
   from { transform: scaleX(0); }
