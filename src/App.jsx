@@ -17,8 +17,8 @@ export default function App() {
   const [splashMounted, setSplashMounted] = useState(true)
 
   useEffect(() => {
-    const fadeOut = setTimeout(() => setSplashVisible(false), 2700)
-    const unmount = setTimeout(() => setSplashMounted(false), 3400)
+    const fadeOut = setTimeout(() => setSplashVisible(false), 2400)
+    const unmount = setTimeout(() => setSplashMounted(false), 3100)
     return () => { clearTimeout(fadeOut); clearTimeout(unmount) }
   }, [])
 
