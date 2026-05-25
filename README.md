@@ -1,6 +1,6 @@
 # saumyagupta2025.github.io/portfolio
 
-My personal portfolio — built with Vite, React, and Tailwind CSS v4.
+Source for my personal site — where I document my work, writing, and what I'm learning.
 
 ## Stack
 
