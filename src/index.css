@@ -57,6 +57,10 @@ html.dark [class*="border-[#eeece8]"] { border-color: #2e2e2e !important; }
 /* Hover borders */
 html.dark [class*="hover:border-[#d6d3d1]"]:hover { border-color: #474747 !important; }
 
+/* Social/pill buttons */
+html.dark a[class*="rounded-md"][class*="border-[#e7e5e4]"] { background-color: #333333 !important; }
+html.dark a[class*="rounded-md"][class*="text-[#78716c]"] { color: #c0bcb8 !important; }
+
 /* Accent (blue links) — use ~= to match exact class token, not substrings */
 html.dark [class~="text-[#1d4ed8]"] { color: #6aa6f5 !important; }
 html.dark [class*="hover:text-[#1d4ed8]"]:hover { color: #6aa6f5 !important; }
