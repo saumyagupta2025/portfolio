@@ -99,7 +99,7 @@ export default function SplashScreen({ visible }) {
             className="mt-2 text-sm text-[#a8a29e] leading-relaxed fade-up"
             style={{ animationDelay: '650ms' }}
           >
-            where I document my work, writing, and what I'm learning.
+            where you'll find my work, writing, what I'm learning — and a bit about me.
           </p>
         </div>
 
