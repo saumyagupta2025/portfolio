@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
@@ -9,10 +10,22 @@ import BlogPost from './pages/BlogPost'
 import Knowledge from './pages/Knowledge'
 import KnowledgeNote from './pages/KnowledgeNote'
 import Library from './pages/Library'
+import SplashScreen from './components/SplashScreen'
 
 export default function App() {
+  const [splashVisible, setSplashVisible] = useState(true)
+  const [splashMounted, setSplashMounted] = useState(true)
+
+  useEffect(() => {
+    const fadeOut = setTimeout(() => setSplashVisible(false), 2200)
+    const unmount = setTimeout(() => setSplashMounted(false), 2900)
+    return () => { clearTimeout(fadeOut); clearTimeout(unmount) }
+  }, [])
+
   return (
-    <HashRouter>
+    <>
+      {splashMounted && <SplashScreen visible={splashVisible} />}
+      <HashRouter>
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -27,5 +40,6 @@ export default function App() {
         </Route>
       </Routes>
     </HashRouter>
+    </>
   )
 }
