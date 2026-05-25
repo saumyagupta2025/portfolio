@@ -24,8 +24,7 @@ export default function Home() {
             <img
               src={import.meta.env.BASE_URL + 'profile.png'}
               alt="Saumya Gupta"
-              className="w-full h-full object-cover scale-150"
-              style={{ objectPosition: 'center 20%' }}
+              className="w-full h-full object-cover object-top scale-125"
             />
           </div>
           <div>
