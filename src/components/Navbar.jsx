@@ -3,11 +3,11 @@ import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { to: '/about', label: 'about' },
   { to: '/projects', label: 'projects' },
   { to: '/blog', label: 'blog' },
   { to: '/knowledge', label: 'notes' },
   { to: '/library', label: 'library' },
+  { to: '/interests', label: 'interests' },
 ]
 
 export default function Navbar() {

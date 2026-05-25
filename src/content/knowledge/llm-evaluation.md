@@ -2,7 +2,7 @@
 title: "LLM Evaluation Frameworks"
 category: "AI/ML"
 updated: "2025-05-15"
-summary: "Comparing DeepEval, LangSmith, RAGAS, and other tools for evaluating LLMs in production. Includes notes from enterprise benchmarking at Shell."
+summary: "Comparing DeepEval, LangSmith, RAGAS, and other tools for evaluating LLMs in production."
 tags: ["LLM", "Evaluation", "DeepEval", "LangSmith", "RAGAS"]
 ---
 
@@ -27,7 +27,7 @@ In production, you want mostly (1) with (3) as a backstop.
 | **Coherence** | Is it well-structured and logically consistent? |
 | **Harmlessness** | Does it avoid harmful, biased, or unsafe content? |
 | **Latency** | How fast is it? (often overlooked as a metric) |
-| **Cost** | Tokens in/out × price. First-class in enterprise. |
+| **Cost** | Tokens in/out × price. Easily overlooked until scale hits. |
 
 For code-specific tasks, add: **correctness**, **security**, **efficiency**.
 
@@ -97,7 +97,7 @@ print(result.to_pandas())
 
 Not an evaluation framework per se, but valuable for model comparison. Same prompts, same tasks, multiple models in one place.
 
-For our use case at Shell: invaluable for selecting the right model per task type.
+Invaluable for selecting the right model per task type.
 
 ## LLM-as-Judge
 
@@ -134,6 +134,6 @@ The most important thing: **automate before you scale.** Manual evaluation doesn
 
 ## Open Questions I'm Still Thinking About
 
-- How do you evaluate "style" alignment — matching an organisation's voice?
+- How do you evaluate "style" alignment — matching a specific voice or tone?
 - When does LLM-as-judge become circular? (Evaluating GPT-4 with GPT-4)
 - How do you handle evaluation dataset drift over time?

@@ -8,12 +8,12 @@ export default function About() {
     <div className="space-y-12">
       {/* Header */}
       <section>
-        <div className="flex items-start gap-5 mb-6">
-          <div className="w-20 h-20 rounded-full border border-[#e7e5e4] shrink-0 overflow-hidden">
+        <div className="flex items-center gap-5 mb-6">
+          <div className="w-28 h-28 rounded-full border border-[#e7e5e4] shrink-0 overflow-hidden">
             <img
-              src="/profile.png"
+              src={import.meta.env.BASE_URL + 'profile.png'}
               alt="Saumya Gupta"
-              className="w-full h-full object-cover object-top scale-150"
+              className="w-full h-full object-cover object-top scale-125"
             />
           </div>
           <div>
@@ -24,8 +24,8 @@ export default function About() {
                 { href: 'https://github.com/saumyagupta2025', label: 'GitHub' },
                 { href: 'https://www.linkedin.com/in/saumya2029/', label: 'LinkedIn' },
                 { href: 'https://twitter.com/saumya_812', label: 'Twitter' },
-                { href: 'https://www.instagram.com/', label: 'Instagram' },   // UPDATE
                 { href: 'https://medium.com/', label: 'Medium' },             // UPDATE
+                { href: 'https://leetcode.com/u/Saumya2029/', label: 'LeetCode' },
                 { href: 'https://drive.google.com/file/d/1jJToGehjuY-_k25PzDQHH9KDiEj8EFL_/view', label: 'Resume' },
               ].map(({ href, label }) => (
                 <a
@@ -49,8 +49,8 @@ export default function About() {
         </p>
         <p className="mt-3 text-[#44403c] leading-relaxed text-[0.9375rem]">
           I hold a B.Tech in Computer Science from Amity University (GPA 8.88/10) and have published
-          three papers in IEEE and international bioinformatics journals. I'm starting at
-          Georgia Tech's Master's in Computer Science, specialising in ML & AI.
+          three papers in IEEE and international bioinformatics journals. Currently at
+          Georgia Tech's Master's in Computer Science (ML & AI).
         </p>
       </section>
 
@@ -87,18 +87,27 @@ export default function About() {
       {/* Education */}
       <section>
         <h2 className="font-serif text-xl font-medium text-[#1c1917] mb-4">Education</h2>
-        <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+        <div className="space-y-5">
           <div>
-            <p className="text-[#1c1917] text-sm font-medium">
-              B.Tech, Computer Science & Engineering
-            </p>
-            <p className="text-[#78716c] text-sm">Amity University, Noida · GPA 8.88/10</p>
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+              <div>
+                <p className="text-[#1c1917] text-sm font-medium">Master of Science, Computer Science</p>
+                <p className="text-[#78716c] text-sm">Georgia Institute of Technology · ML & AI</p>
+              </div>
+              <span className="text-xs text-[#a8a29e] font-mono shrink-0">2026 – present</span>
+            </div>
           </div>
-          <span className="text-xs text-[#a8a29e] font-mono shrink-0">Jul 2019 – Jul 2023</span>
+          <div>
+            <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+              <div>
+                <p className="text-[#1c1917] text-sm font-medium">B.Tech, Computer Science & Engineering</p>
+                <p className="text-[#78716c] text-sm">Amity University, Noida · GPA 8.88/10</p>
+              </div>
+              <span className="text-xs text-[#a8a29e] font-mono shrink-0">Jul 2019 – Jul 2023</span>
+            </div>
+            <p className="mt-1 text-sm text-[#78716c]">Merit scholarship: 100% (2019–20), 50% (2022–23)</p>
+          </div>
         </div>
-        <p className="mt-2 text-sm text-[#78716c]">
-          Merit scholarship: 100% (2019–20), 50% (2022–23)
-        </p>
       </section>
 
       <hr className="border-[#e7e5e4]" />

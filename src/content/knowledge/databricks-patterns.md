@@ -2,7 +2,7 @@
 title: "Databricks Patterns & Optimisations"
 category: "Data Engineering"
 updated: "2025-05-10"
-summary: "Notes on Databricks optimisation — Autoloader, Delta Lake, cluster configuration, and cost management patterns from production experience."
+summary: "Notes on Databricks optimisation — Autoloader, Delta Lake, cluster configuration, and cost management patterns."
 tags: ["Databricks", "PySpark", "Delta Lake", "Data Engineering"]
 ---
 
@@ -42,7 +42,7 @@ df.writeStream
 ```python
 .option("cloudFiles.maxFilesPerTrigger", 1000)  # limit per trigger
 ```
-We used this to prevent runaway jobs from processing unexpectedly large batches.
+Use this to prevent runaway jobs from processing unexpectedly large batches.
 
 ### What I learned from optimising Autoloader (70% runtime reduction)
 
@@ -124,7 +124,7 @@ Watch out: auto-scaling doesn't always scale down fast enough. Set `spark.databr
 
 ## Terraform for Databricks Infrastructure
 
-We manage all Databricks infrastructure as Terraform:
+Managing Databricks infrastructure as Terraform:
 
 ```hcl
 resource "databricks_job" "etl_pipeline" {
@@ -177,7 +177,7 @@ WHERE created_at > (SELECT MAX(created_at) FROM {{ this }})
 {% endif %}
 ```
 
-The 35% speed increase and 60% cost reduction we achieved at Shell came from:
+Key gains from this pattern:
 1. Replacing full table rebuilds with incremental models
 2. Adding proper partitioning and Z-ordering
 3. Eliminating redundant intermediate tables

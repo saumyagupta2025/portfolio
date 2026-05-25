@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { ExternalLink } from 'lucide-react'
-import { books, videos, articles } from '../data/library'
+import { books, videos, articles, podcasts } from '../data/library'
 
-const TABS = ['Books', 'Videos', 'Articles']
+const TABS = ['Books', 'Videos', 'Podcasts', 'Articles']
 
 const statusLabel = { reading: 'Reading', read: 'Read', 'want-to-read': 'Want to read' }
 const statusColor = {
@@ -62,10 +62,6 @@ export default function Library() {
         <h1 className="font-serif text-[2rem] font-medium text-[#1c1917] tracking-tight">Library</h1>
         <p className="mt-3 text-[#78716c] text-sm leading-relaxed">
           Things I read, watch, and recommend. Updated as I go.
-          <br />
-          <span className="text-[#a8a29e] text-xs font-mono">
-            Edit <code className="bg-[#f5f5f4] px-1.5 py-0.5 rounded text-[0.75rem] border border-[#e7e5e4]">src/data/library.js</code> to add content.
-          </span>
         </p>
       </section>
 
@@ -99,29 +95,62 @@ export default function Library() {
 
       {/* Videos */}
       {tab === 'Videos' && (
+        <div className="space-y-10">
+          {[{ label: 'Videos', type: 'video' }, { label: 'Channels', type: 'channel' }].map(({ label, type }) => {
+            const items = videos.filter(v => v.type === type)
+            if (!items.length) return null
+            return (
+              <div key={type}>
+                <h3 className="text-xs font-mono text-[#a8a29e] uppercase tracking-wide mb-4">{label}</h3>
+                <ul className="space-y-5">
+                  {items.map(v => (
+                    <li key={v.title}>
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <a
+                            href={v.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="text-sm text-[#1c1917] hover:text-[#1d4ed8] transition-colors font-medium inline-flex items-center gap-1"
+                          >
+                            {v.title}
+                            <ExternalLink size={11} className="text-[#a8a29e]" />
+                          </a>
+                          <p className="mt-1 text-xs text-[#78716c] leading-relaxed">{v.description}</p>
+                        </div>
+                        <span className="text-xs text-[#a8a29e] bg-[#f5f5f4] border border-[#e7e5e4] px-1.5 py-0.5 rounded shrink-0">
+                          {v.tag}
+                        </span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          })}
+        </div>
+      )}
+
+      {/* Podcasts */}
+      {tab === 'Podcasts' && (
         <ul className="space-y-5">
-          {videos.map(v => (
-            <li key={v.title}>
+          {podcasts.map(p => (
+            <li key={p.title}>
               <div className="flex items-start justify-between gap-4">
                 <div>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <a
-                      href={v.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-sm text-[#1c1917] hover:text-[#1d4ed8] transition-colors font-medium inline-flex items-center gap-1"
-                    >
-                      {v.title}
-                      <ExternalLink size={11} className="text-[#a8a29e]" />
-                    </a>
-                    <span className="text-xs text-[#a8a29e] bg-[#f5f5f4] border border-[#e7e5e4] px-1.5 py-0 rounded">
-                      {v.type}
-                    </span>
-                  </div>
-                  <p className="mt-1 text-xs text-[#78716c] leading-relaxed">{v.description}</p>
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-sm text-[#1c1917] hover:text-[#1d4ed8] transition-colors font-medium inline-flex items-center gap-1"
+                  >
+                    {p.title}
+                    <ExternalLink size={11} className="text-[#a8a29e]" />
+                  </a>
+                  <p className="mt-1 text-xs text-[#78716c] leading-relaxed">{p.description}</p>
                 </div>
                 <span className="text-xs text-[#a8a29e] bg-[#f5f5f4] border border-[#e7e5e4] px-1.5 py-0.5 rounded shrink-0">
-                  {v.tag}
+                  {p.tag}
                 </span>
               </div>
             </li>

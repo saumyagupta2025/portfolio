@@ -3,11 +3,11 @@
 // Shown on the Home page as a lightweight "what I'm up to" section.
 
 export const now = {
-  updatedAt: 'May 2025',
+  updatedAt: 'May 2026',
   items: [
     'Building GenAI evaluation frameworks and agentic systems at Shell India.',
-    'Starting at Georgia Tech — Master\'s in Computer Science (ML & AI specialisation).',
+    'At Georgia Tech — Master\'s in Computer Science (ML & AI).',
     'Exploring: LLM evaluation methodology, multimodal RAG, and agent architectures.',
-    'Reading: The Alignment Problem — Brian Christian.',
+    'Reading: The Mountain is You — Brianna Wiest.',
   ],
 }

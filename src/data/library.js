@@ -5,6 +5,14 @@
 
 export const books = [
   {
+    title: 'The Mountain is You',
+    author: 'Brianna Wiest',
+    status: 'reading',
+    tag: 'Self',
+    notes: 'On self-sabotage and the inner work of becoming who you want to be.',
+    link: null,
+  },
+  {
     title: 'The Alignment Problem',
     author: 'Brian Christian',
     status: 'reading',
@@ -89,6 +97,54 @@ export const videos = [
     url: 'https://www.youtube.com/@lexfridman',
     type: 'channel',
     tag: 'Interviews',
+  },
+  {
+    title: "Let's build GPT: from scratch, in code, spelled out",
+    description: 'Andrej Karpathy builds a GPT from scratch. The clearest explanation of transformers I\'ve seen.',
+    url: 'https://www.youtube.com/watch?v=kCc8FmEb1nY',
+    type: 'video',
+    tag: 'AI/ML',
+  },
+  {
+    title: 'Intro to Large Language Models',
+    description: 'Karpathy\'s one-hour overview of LLMs — how they work, how they\'re trained, and where they\'re going.',
+    url: 'https://www.youtube.com/watch?v=zjkBMFhNj_g',
+    type: 'video',
+    tag: 'LLM',
+  },
+  {
+    title: 'But what is a neural network?',
+    description: '3Blue1Brown\'s legendary visual introduction to neural networks. The best starting point for anyone.',
+    url: 'https://www.youtube.com/watch?v=aircAruvnKk',
+    type: 'video',
+    tag: 'AI/ML',
+  },
+]
+
+export const podcasts = [
+  {
+    title: 'Latent Space',
+    description: 'The AI engineering podcast. Deeply technical conversations about building with LLMs — evals, agents, infra, and the people doing it.',
+    url: 'https://www.latent.space/podcast',
+    tag: 'AI Engineering',
+  },
+  {
+    title: 'Lex Fridman Podcast',
+    description: 'Long-form conversations with researchers, engineers, and scientists. The AI episodes are essential listening.',
+    url: 'https://lexfridman.com/podcast/',
+    tag: 'AI/ML',
+  },
+  {
+    title: 'The TWIML AI Podcast',
+    description: 'This Week in Machine Learning — interviews with ML researchers and practitioners on the latest in the field.',
+    url: 'https://twimlai.com/podcast/twimlai/',
+    tag: 'AI/ML',
+  },
+  {
+    title: 'The Data Engineering Podcast',
+    description: 'Practical conversations about data pipelines, infrastructure, and the tools that make modern data work.',
+    url: 'https://www.dataengineeringpodcast.com/',
+    tag: 'Data Engineering',
   },
 ]
 

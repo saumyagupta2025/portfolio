@@ -26,10 +26,6 @@ export default function Knowledge() {
         <p className="mt-3 text-[#78716c] text-sm leading-relaxed">
           Summaries and deep-dives on topics I'm exploring —
           a public version of my Obsidian vault.
-          <br />
-          <span className="text-[#a8a29e] text-xs font-mono">
-            To add a note: create <code className="bg-[#f5f5f4] px-1.5 py-0.5 rounded text-[0.75rem] border border-[#e7e5e4]">src/content/knowledge/my-note.md</code>
-          </span>
         </p>
       </section>
 

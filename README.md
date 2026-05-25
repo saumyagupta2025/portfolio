@@ -1,16 +1,105 @@
-# React + Vite
+# Portfolio — Saumya Gupta
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site built with Vite + React + Tailwind CSS v4. Hosted on GitHub Pages at [saumyagupta2025.github.io/portfolio](https://saumyagupta2025.github.io/portfolio).
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Vite** — build tool
+- **React** — UI
+- **Tailwind CSS v4** — styling
+- **react-markdown** — markdown rendering
+- **gh-pages** — deployment
 
-## React Compiler
+## Running locally
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Deploying
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run deploy
+```
+
+Builds and pushes to the `gh-pages` branch automatically.
+
+---
+
+## How to update content
+
+### Blog posts
+
+Create a new file in `src/content/blog/`:
+
+```
+src/content/blog/my-post-title.md
+```
+
+With this frontmatter:
+
+```yaml
+---
+title: "Post Title"
+date: "2026-05-25"
+tags: ["Tag1", "Tag2"]
+excerpt: "A short description shown in the blog listing."
+---
+
+Your content here...
+```
+
+### Knowledge notes
+
+Create a new file in `src/content/knowledge/`:
+
+```
+src/content/knowledge/my-note.md
+```
+
+With this frontmatter:
+
+```yaml
+---
+title: "Note Title"
+category: "System Design"
+updated: "2026-05-25"
+summary: "Short summary shown in the notes listing."
+tags: ["Tag1", "Tag2"]
+---
+
+Your content here...
+```
+
+The `category` field controls the filter tags on the Notes page. Any new category value automatically appears as a filter button.
+
+### Projects
+
+Edit `src/data/projects.js`. Set `app` to a URL to show the "Live app" badge.
+
+### Library (books, videos, podcasts, articles)
+
+Edit `src/data/library.js`.
+
+- Books: `status` can be `"reading"`, `"read"`, or `"want-to-read"`
+- Videos: `type` can be `"video"` or `"channel"`
+
+### Now section
+
+Edit `src/data/now.js` — update `updatedAt` and the `items` array.
+
+### Interests page (obsessions, learning, beliefs, setup)
+
+Edit `src/data/personal.js`.
+
+### Experience, education, skills, certifications
+
+Edit the relevant file in `src/data/`:
+- `experience.js`
+- `skills.js`
+- `certifications.js`
+
+### Profile photo
+
+Replace `public/profile.png`.

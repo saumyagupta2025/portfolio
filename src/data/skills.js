@@ -3,7 +3,6 @@
 
 export const skills = {
   'Programming': ['Python', 'Java', 'C++', 'SQL'],
-  'Web & UI': ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
   'AI & Agents': [
     'LangChain', 'LangGraph', 'LangSmith', 'LangFlow',
     'DeepEval', 'Crew.AI', 'HuggingFace', 'AI Foundry',
@@ -15,4 +14,5 @@ export const skills = {
     'Synapse Analytics', 'AWS', 'Azure', 'Docker',
     'Terraform', 'MySQL', 'PostgreSQL', 'CI/CD',
   ],
+  'Web & UI': ['React', 'JavaScript', 'HTML', 'CSS', 'Tailwind CSS'],
 }
