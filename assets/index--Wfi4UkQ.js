@@ -244,7 +244,7 @@ WHERE created_at > (SELECT MAX(created_at) FROM {{ this }})
 {% endif %}
 \`\`\`
 
-The 35% speed increase and 60% cost reduction we achieved at Shell came from:
+The 35% speed increase and 60% cost reduction we achieved came from:
 1. Replacing full table rebuilds with incremental models
 2. Adding proper partitioning and Z-ordering
 3. Eliminating redundant intermediate tables
@@ -252,7 +252,7 @@ The 35% speed increase and 60% cost reduction we achieved at Shell came from:
 title: "LLM Evaluation Frameworks"
 category: "AI/ML"
 updated: "2025-05-15"
-summary: "Comparing DeepEval, LangSmith, RAGAS, and other tools for evaluating LLMs in production. Includes notes from enterprise benchmarking at Shell."
+summary: "Comparing DeepEval, LangSmith, RAGAS, and other tools for evaluating LLMs in production. Includes notes from enterprise benchmarking."
 tags: ["LLM", "Evaluation", "DeepEval", "LangSmith", "RAGAS"]
 ---
 
@@ -347,7 +347,7 @@ print(result.to_pandas())
 
 Not an evaluation framework per se, but valuable for model comparison. Same prompts, same tasks, multiple models in one place.
 
-For our use case at Shell: invaluable for selecting the right model per task type.
+For our use case: invaluable for selecting the right model per task type.
 
 ## LLM-as-Judge
 
