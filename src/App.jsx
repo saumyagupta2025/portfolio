@@ -13,10 +13,12 @@ import Library from './pages/Library'
 import SplashScreen from './components/SplashScreen'
 
 export default function App() {
-  const [splashVisible, setSplashVisible] = useState(true)
-  const [splashMounted, setSplashMounted] = useState(true)
+  const isHome = window.location.hash === '' || window.location.hash === '#/' || window.location.hash === '#'
+  const [splashVisible, setSplashVisible] = useState(isHome)
+  const [splashMounted, setSplashMounted] = useState(isHome)
 
   useEffect(() => {
+    if (!isHome) return
     const fadeOut = setTimeout(() => setSplashVisible(false), 2400)
     const unmount = setTimeout(() => setSplashMounted(false), 3100)
     return () => { clearTimeout(fadeOut); clearTimeout(unmount) }
