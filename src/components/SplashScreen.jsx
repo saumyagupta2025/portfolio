@@ -83,7 +83,7 @@ export default function SplashScreen({ visible }) {
       </div>
 
       {/* Center content */}
-      <div className="flex flex-col items-center gap-7 text-center px-8">
+      <div className="flex flex-col items-center gap-7 text-center px-8 -translate-y-12">
         <div className="fade-in" style={{ animationDelay: '100ms' }}>
           <Globe />
         </div>
