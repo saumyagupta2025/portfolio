@@ -96,19 +96,12 @@ export default function SplashScreen({ visible }) {
             Welcome to my corner of the internet.
           </p>
           <p
-            className="mt-2 text-sm text-[#a8a29e] leading-relaxed fade-up"
+            className="mt-2 text-sm text-[#57534e] leading-relaxed fade-up"
             style={{ animationDelay: '650ms' }}
           >
             where you'll find my work, writing, what I'm learning — and a bit about me.
           </p>
         </div>
-
-        <span
-          className="text-xs text-[#c4bfba] font-mono fade-up"
-          style={{ animationDelay: '850ms' }}
-        >
-          — Saumya
-        </span>
       </div>
 
       {/* Progress bar */}
