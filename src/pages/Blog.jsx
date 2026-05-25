@@ -28,10 +28,6 @@ export default function Blog() {
         <h1 className="font-serif text-[2rem] font-medium text-[#1c1917] tracking-tight">Blog</h1>
         <p className="mt-3 text-[#78716c] text-sm leading-relaxed">
           Thoughts on GenAI, data engineering, and things I'm figuring out.
-          <br />
-          <span className="text-[#a8a29e] text-xs font-mono">
-            To add a post: create <code className="bg-[#f5f5f4] px-1.5 py-0.5 rounded text-[0.75rem] border border-[#e7e5e4]">src/content/blog/my-post.md</code>
-          </span>
         </p>
       </section>
 
