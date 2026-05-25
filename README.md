@@ -1,4 +1,4 @@
-# saumyagupta2025.github.io/portfolio
+# Portfolio
 
 Source for my personal site — where I document my work, writing, and what I'm learning.
 
