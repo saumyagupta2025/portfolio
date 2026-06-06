@@ -13,35 +13,11 @@ export const books = [
     link: null,
   },
   {
-    title: 'The Alignment Problem',
-    author: 'Brian Christian',
-    status: 'reading',
-    tag: 'AI',
-    notes: 'A deep look at the challenge of making AI systems behave as intended. Required reading for anyone building AI.',
-    link: null,
-  },
-  {
     title: 'Designing Machine Learning Systems',
     author: 'Chip Huyen',
     status: 'reading',
     tag: 'AI/ML',
     notes: 'Comprehensive guide to production ML — from data pipelines to deployment.',
-    link: null,
-  },
-  {
-    title: 'Building a Second Brain',
-    author: 'Tiago Forte',
-    status: 'read',
-    tag: 'Productivity',
-    notes: 'Changed how I organise notes and knowledge. Introduced me to the PARA method.',
-    link: null,
-  },
-  {
-    title: 'The Pragmatic Programmer',
-    author: 'David Thomas & Andrew Hunt',
-    status: 'read',
-    tag: 'Engineering',
-    notes: 'Timeless software engineering philosophy. Re-read sections regularly.',
     link: null,
   },
   {
@@ -71,32 +47,11 @@ export const videos = [
     tag: 'AI/ML',
   },
   {
-    title: '3Blue1Brown',
-    description: 'Beautiful visual explanations of math, linear algebra, and neural networks. Changed how I think about gradients.',
-    url: 'https://www.youtube.com/@3blue1brown',
-    type: 'channel',
-    tag: 'Math',
-  },
-  {
-    title: 'Yannic Kilcher',
-    description: 'In-depth walkthroughs of AI research papers and commentary on the field.',
-    url: 'https://www.youtube.com/@YannicKilcher',
-    type: 'channel',
-    tag: 'AI Research',
-  },
-  {
     title: 'Two Minute Papers',
     description: 'Quick, enthusiastic summaries of the latest AI research. Great for staying current.',
     url: 'https://www.youtube.com/@TwoMinutePapers',
     type: 'channel',
     tag: 'AI Research',
-  },
-  {
-    title: 'Lex Fridman',
-    description: 'Long-form interviews with researchers, engineers, and thinkers at the frontier of AI.',
-    url: 'https://www.youtube.com/@lexfridman',
-    type: 'channel',
-    tag: 'Interviews',
   },
   {
     title: "Let's build GPT: from scratch, in code, spelled out",
@@ -106,18 +61,11 @@ export const videos = [
     tag: 'AI/ML',
   },
   {
-    title: 'Intro to Large Language Models',
-    description: 'Karpathy\'s one-hour overview of LLMs — how they work, how they\'re trained, and where they\'re going.',
-    url: 'https://www.youtube.com/watch?v=zjkBMFhNj_g',
-    type: 'video',
-    tag: 'LLM',
-  },
-  {
-    title: 'But what is a neural network?',
-    description: '3Blue1Brown\'s legendary visual introduction to neural networks. The best starting point for anyone.',
-    url: 'https://www.youtube.com/watch?v=aircAruvnKk',
-    type: 'video',
-    tag: 'AI/ML',
+    title: 'AI Engineer',
+    description: 'Conference talks, interviews, and deep-dives from the AI Engineer Summit. Covers agents, evals, RAG, and the state of AI engineering.',
+    url: 'https://www.youtube.com/@aiDotEngineer',
+    type: 'channel',
+    tag: 'AI Engineering',
   },
 ]
 
@@ -140,12 +88,6 @@ export const podcasts = [
     url: 'https://twimlai.com/podcast/twimlai/',
     tag: 'AI/ML',
   },
-  {
-    title: 'The Data Engineering Podcast',
-    description: 'Practical conversations about data pipelines, infrastructure, and the tools that make modern data work.',
-    url: 'https://www.dataengineeringpodcast.com/',
-    tag: 'Data Engineering',
-  },
 ]
 
 export const articles = [
@@ -155,13 +97,6 @@ export const articles = [
     url: 'https://lilianweng.github.io',
     tag: 'AI/ML',
     notes: 'Exceptional technical deep-dives on RL, diffusion models, agents, and LLMs from an OpenAI researcher.',
-  },
-  {
-    title: 'The Batch by Andrew Ng',
-    source: 'deeplearning.ai',
-    url: 'https://www.deeplearning.ai/the-batch/',
-    tag: 'AI/ML',
-    notes: 'Weekly AI newsletter — good signal-to-noise ratio.',
   },
   {
     title: "Simon Willison's Weblog",
